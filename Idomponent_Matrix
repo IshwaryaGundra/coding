@@ -1,0 +1,13 @@
+def matrixGame(mat):
+    # Write your Code Here.
+    # Return a boolean variable 'True' or 'False'
+    #we need 3 loops for i is for moving row number j is for each row a column and k is for moving values from each row
+    for i in range(0,len(mat)):
+        for j in range(0,len(mat)):
+            r=0
+            for k in range(len(mat)):
+                r=r+mat[i][k]*mat[k][j]
+            if r!=mat[i][j]:
+                return False
+    return True  
+    pass
