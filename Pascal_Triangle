@@ -1,0 +1,23 @@
+#solution for printing pascal triangle
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        a=[]
+        for i in range(numRows):
+            if i==0:
+                a.append([1])
+            if i==1:
+                a.append([1,1])
+            k=a[-1]
+            if i>1:
+                b=[1]
+                for i in range(len(k)-1):
+                    s=k[i]+k[i+1]
+                    b.append(s)
+                b.append(1)
+                a.append(b)
+        return a
+#for finding element at rth row and cth column is r-1Cc-1
+
+
+
+        
